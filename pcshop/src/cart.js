@@ -1,5 +1,6 @@
 import React from 'react';
 import './cart.css';
+import Footer from './footer.js';
 
 
 class Cart extends React.Component{
@@ -14,11 +15,15 @@ class Cart extends React.Component{
     }
     componentDidMount() {
 
-        let cart = JSON.parse(localStorage.getItem('order'))
-        this.setState({
-            cartProducts: cart,
 
-        });
+if(localStorage.getItem('order')) {
+
+    let cart = JSON.parse(localStorage.getItem('order'));
+    this.setState({
+        cartProducts: cart,
+    });
+
+}
 
 
     }
@@ -78,6 +83,7 @@ console.log("gjsgsj", cart)
                     <div className="col-sm-9"></div>
                     <div className="col-sm-3"><button className="btn btn-lg btn-success">Till Kassan</button></div>
                 </div>
+                <Footer/>
 
             </div>
         );

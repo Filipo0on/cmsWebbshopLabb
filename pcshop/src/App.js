@@ -6,6 +6,7 @@ import Cart from './cart.js';
 import Datorer from './datorer.js';
 import Bild from './bild.js';
 import Ljud from './Ljud.js';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -60,19 +61,3 @@ export default App;
 
 
 
-/*
-
-import React from 'react';
-class Products extends React.Component{
-    render () {
-        return (
-            <div>
-
-            </div>
-        );
-    }
-
-}
-export default Products;
-
-*/

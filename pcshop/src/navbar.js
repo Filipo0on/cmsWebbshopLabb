@@ -6,10 +6,11 @@ class Navbar extends React.Component{
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="#">Tech Masters</a>
+                        <NavLink className="navbar-brand" to="/">Tech Masters</NavLink>
+
                     </div>
                     <ul className="nav navbar-nav">
-                        <li><NavLink to="/">Home</NavLink></li>
+
                         <li><NavLink to="/datorer">Datorer</NavLink></li>
                         <li><NavLink to="/bild">Bild</NavLink></li>
                         <li><NavLink to="/ljud">Ljud</NavLink></li>

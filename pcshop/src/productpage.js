@@ -1,6 +1,7 @@
 import React from 'react';
 import './productpage.css';
 import Rating from './rating.js';
+
 class Productpage extends React.Component{
 
     constructor (props) {
@@ -60,14 +61,16 @@ class Productpage extends React.Component{
                         <div className="col-sm-12"><h2>{product.titel}</h2></div>
                     </div>
                     <div className="row">
-                        <div className="col-sm-12">(starrating)</div>
+                        <div className="col-sm-12"><p>Lagersaldo: {product.stock}</p></div>
                     </div>
+
                     <br />
                     <div className="row">
                         <div className="col-sm-12"><p>{product.productText}</p></div>
                     </div>
+
                     <div className="row">
-                        <div className="col-sm-12"><h3>{product.price}</h3></div>
+                        <div className="col-sm-12"><h3>{product.price}:-</h3></div>
                     </div>
                     <br />
                     <div className="row">

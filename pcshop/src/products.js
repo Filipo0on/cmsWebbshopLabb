@@ -1,17 +1,14 @@
 import React from 'react';
 import './products.css';
+import Footer from './footer.js';
 import ProductTemplate from './productTemplate';
-
-
-
-
 
 class Products extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            value: 'PriceHL',
+            value: '',
             Products: [],
         };
         this.handleChange = this.handleChange.bind(this);
@@ -73,14 +70,31 @@ render () {
     );
     return (
         <div id="productcontainer">
+            <div className="row">
+                <div className="col-sm-1"></div>
+                <div className="col-sm-10 jumbotron">
+                        <h1>Välkommen till Tech Masters</h1>
+                        <p>Vi förser dig med den senaste hemelektroniken!</p>
+                </div>
+                <div className="col-sm-1"></div>
 
-            <select value={this.state.value} onChange={this.handleChange}>
-                <option value="priceHL">Pris högt-lågt</option>
-                <option value="priceLH">Pris lågt-högt</option>
-                <option value="stockHL">Lagerstatus högt-lågt</option>
-                <option value="stockLH">Lagerstatus lågt-högt</option>
-            </select>
+            </div>
+
+            <div className="row">
+                <div className="col-sm-9"></div>
+                <div className="form-group col-sm-2">
+                    <select className="form-control" value={this.state.value} onChange={this.handleChange}>
+                        <option value="" disabled selected hidden>Sortera efter</option>
+                        <option value="priceHL">Pris högt-lågt</option>
+                        <option value="priceLH">Pris lågt-högt</option>
+                        <option value="stockHL">Lagerstatus högt-lågt</option>
+                        <option value="stockLH">Lagerstatus lågt-högt</option>
+                    </select>
+                </div>
+                <div className="col-sm-1"></div>
+            </div>
             {productlist}
+            <Footer/>
         </div>
     );
 }

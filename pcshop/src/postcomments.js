@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './postcomments.css';
-
+import Footer from './footer.js';
 class PostComments extends React.Component{
     constructor(props) {
         super(props);
@@ -51,12 +51,13 @@ class PostComments extends React.Component{
 
 
 
-        event.preventDefault();
+
     }
 
     render () {
 
         return (
+
             <div className="Row ">
                 <div className="col-sm-3"></div>
                 <div className="col-sm-6 container">
@@ -79,6 +80,8 @@ class PostComments extends React.Component{
 
 
             </div>
+
+
         );
     }
 
